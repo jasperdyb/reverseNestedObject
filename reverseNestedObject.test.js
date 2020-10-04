@@ -1,8 +1,8 @@
-const ans = require("../reverseNestedObject");
+const ans = require("./reverseNestedObject");
 var assert = require("assert");
 
 describe("Reverse Nested Objects", function () {
-  it("should process inputValue to match outputValue", function () {
+  test("should process inputValue to match outputValue", function () {
     let inputValue = {
       hired: {
         be: {
@@ -22,8 +22,8 @@ describe("Reverse Nested Objects", function () {
         },
       },
     };
-    assert.deepStrictEqual(
-      ans.reverseNestedObject(inputValue, null),
+
+    expect(ans.reverseNestedObject(inputValue, null)).toStrictEqual(
       outputValue
     );
   });
